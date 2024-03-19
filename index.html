@@ -8,9 +8,39 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Livorna Regular';
+            src: url('Fonts/LIVORNAREGULAR.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Livorna Bold';
+            src: url('Fonts/LIVORNABOLD.TTF') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'FB Ashkenazy';
+            src: url('Fonts/FbAshkenazy-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
         body {
             background-color: #f0f0f0;
             /* Grey background similar to PDF viewed in Chrome */
+        }
+
+        .fbAshkenazy {
+            font-family: FB Ashkenazy, serif;
+        }
+
+        .livorna {
+            font-family: FB Ashkenazy, serif;
         }
 
         .container {
@@ -95,6 +125,42 @@
             border-left: 1px solid #ccc;
             margin: 0 10px;
         }
+
+        /* Equivalent font sizes for Microsoft Word */
+        .nine-point {
+            font-size: 1.25rem !important;
+            /* Approximate equivalent of 9pt */
+        }
+
+        .ten-point {
+            font-size: 1.5rem !important;
+            /* Approximate equivalent of 10pt */
+        }
+
+        .eleven-point {
+            font-size: 1.625rem !important;
+            /* Approximate equivalent of 10pt */
+        }
+
+        .twelve-point {
+            font-size: 1.75rem !important;
+            /* Approximate equivalent of 12pt */
+        }
+
+        .thirteen-point {
+            font-size: 1.90rem !important;
+            /* Approximate equivalent of 12pt */
+        }
+
+        .fourteen-point {
+            font-size: 2.05rem !important;
+            /* Approximate equivalent of 12pt */
+        }
+
+        .fifteen-point {
+            font-size: 2.2rem !important;
+            /* Approximate equivalent of 15pt */
+        }
     </style>
 </head>
 
@@ -103,371 +169,387 @@
         <div class="card form-container">
             <div class="card-body form-card-body">
                 <img src="letterhead.jpg" class="letterhead mb-0" alt="Letterhead Image">
-                <h1 class="card-title text-center">אפליקעישאן לשנת תשפ"ד</h1>
-                <h4 class="text-center">אן אפליקאציע וואס פעלט די פולע אינפארמאציע ווערט נישט באטראכט</h4>
+                <h1 class="card-title text-center fbAshkenazy fw-bolder">אפליקעישאן לשנת תשפ"ד</h1>
+                <h4 class="text-center fbAshkenazy fw-bolder">אן אפליקאציע וואס פעלט די פולע אינפארמאציע ווערט נישט
+                    באטראכט</h4>
                 <!-- Your form fields will go here -->
                 <!-- Example: -->
                 <form class="form-application p-0">
                     <div class="row border-bottom2 p-0">
-                        <div class="col-6 border-left2 p-0">
+                        <div class="col-6 border-left2 p-0 livorna">
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text fs-4" for="yiddishName">שם הבחור</label>
+                                <label class="input-group-text fs-4 fifteen-point" for="yiddishName">שם הבחור</label>
                                 <input type="text" class="form-control p-0 pe-2" id="yiddishName">
                             </div>
                             <div class="row g-0">
                                 <div class="col-2">
                                     <div class="input-group px-1">
-                                        <label class="input-group-text" for="age">גיל</label>
+                                        <label class="input-group-text twelve-point" for="age">גיל</label>
                                         <input type="text" pattern="^(1[3-9]|[23]0)$" class="form-control p-0 pe-2"
                                             id="age">
                                     </div>
                                 </div>
                                 <div class="col-10">
                                     <div class="input-group px-1">
-                                        <span class="fs-5 ms-2">יום הלידה:</span>
-                                        <label class="input-group-text" for="hebrewDay">יום</label>
+                                        <span class="fs-5 ms-2 twelve-point">יום הלידה:</span>
+                                        <label class="input-group-text ten-point" for="hebrewDay">יום</label>
                                         <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
-                                        <label class="input-group-text" for="hebrewMonth">חודש</label>
+                                        <label class="input-group-text ten-point me-1" for="hebrewMonth">חודש</label>
                                         <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
-                                        <label class="input-group-text" for="hebrewYear">שנת</label>
+                                        <label class="input-group-text ten-point me-1" for="hebrewYear">שנת</label>
                                         <input type="text" class="form-control p-0 pe-2" id="hebrewYear">
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-2">
-                                <span class="fs-5">למד בת"ת/ישיבה: </span>אריינשרייבן אלע פלעצער:
+                            <div class="mt-2 nine-point">
+                                <span class="twelve-point">למד בת"ת/ישיבה: </span>אריינשרייבן אלע פלעצער:
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="learnedIn1">1</label>
+                                <label class="input-group-text twelve-point" for="learnedIn1">1</label>
                                 <input type="text" class="form-control p-0 pe-2" id="learnedIn1">
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="learnedIn2">2</label>
+                                <label class="input-group-text twelve-point" for="learnedIn2">2</label>
                                 <input type="text" class="form-control p-0 pe-2" id="learnedIn2">
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="learnedIn3">3</label>
+                                <label class="input-group-text twelve-point" for="learnedIn3">3</label>
                                 <input type="text" class="form-control p-0 pe-2" id="learnedIn3">
                             </div>
 
                             <div class="input-group px-1 mt-2 mb-1">
-                                <label class="input-group-text fs-4" for="yiddishFatherName">שם האב</label>
+                                <label class="input-group-text fifteen-point" for="yiddishFatherName">שם האב</label>
                                 <input type="text" class="form-control p-0 pe-2" id="yiddishFatherName">
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="fathersFather">בן ר'</label>
+                                <label class="input-group-text twelve-point" for="fathersFather">בן ר'</label>
                                 <input type="text" class="form-control p-0 pe-2" id="fathersFather">
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="fathersShver">חתן ר'</label>
+                                <label class="input-group-text twelve-point" for="fathersShver">חתן ר'</label>
                                 <input type="text" class="form-control p-0 pe-2" id="fathersShver">
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="fathersWorkPlace">עלטערן'ס ארבעט פלאץ</label>
+                                <label class="input-group-text twelve-point" for="fathersWorkPlace">עלטערן'ס ארבעט
+                                    פלאץ</label>
                                 <input type="text" class="form-control p-0 pe-2" id="fathersWorkPlace">
                             </div>
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="fathersWorkAddress">ביזנעס אדרעס</label>
+                                <label class="input-group-text twelve-point" for="fathersWorkAddress">ביזנעס
+                                    אדרעס</label>
                                 <input type="text" class="form-control p-0 pe-2" id="fathersWorkAddress">
                             </div>
 
                         </div>
                         <div class="col-6 p-0" dir="ltr">
                             <div class="input-group px-1">
-                                <label class="input-group-text fs-4" for="englishName">STUDENT NAME
+                                <label class="input-group-text ten-point" for="englishName">STUDENT NAME
                                     <span style="font-size: small;" class="ms-1">IN ENGLISH</span>
                                 </label>
                                 <input type="text" class="form-control p-0 ps-2" id="englishName">
                             </div>
 
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">D.O.B.</label>
+                                <label class="input-group-text ten-point" for="dob">D.O.B.</label>
                                 <input type="text" class="form-control p-0 ps-2" id="dob">
                             </div>
 
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">HOME ADDRESS</label>
-                                <input type="text" class="form-control p-0 ps-2" id="dob">
+                                <label class="input-group-text ten-point" for="address">HOME ADDRESS</label>
+                                <input type="text" class="form-control p-0 ps-2" id="address">
                             </div>
 
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">CITY, STATE, ZIP</label>
-                                <input type="text" class="form-control p-0 ps-2" id="dob">
+                                <label class="input-group-text ten-point" for="city">CITY, STATE, ZIP</label>
+                                <input type="text" class="form-control p-0 ps-2" id="city">
                             </div>
 
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">FATHERS NAME
+                                <label class="input-group-text ten-point" for="fathersNameEnglish">FATHERS NAME
                                     <span style="font-size: small;" class="ms-1">IN ENGLISH</span>
                                 </label>
-                                <input type="text" class="form-control p-0 ps-2" id="dob">
+                                <input type="text" class="form-control p-0 ps-2" id="fathersNameEnglish">
                             </div>
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">HOME TELEPHONE</label>
-                                <input type="text" class="form-control p-0 ps-2" id="dob">
+                                <label class="input-group-text ten-point" for="homePhone">HOME TELEPHONE</label>
+                                <input type="text" class="form-control p-0 ps-2" id="homePhone">
                             </div>
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">CELL PHONE</label>
-                                <input type="text" class="form-control p-0 ps-2" id="dob">
+                                <label class="input-group-text ten-point" for="cellPhone">CELL PHONE</label>
+                                <input type="text" class="form-control p-0 ps-2" id="cellPhone">
                             </div>
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">BUSINESS ADDRESS</label>
-                                <input type="text" class="form-control p-0 ps-2" id="dob">
+                                <label class="input-group-text ten-point" for="businessAddress">BUSINESS ADDRESS</label>
+                                <input type="text" class="form-control p-0 ps-2" id="businessAddress">
                             </div>
                             <div class="input-group px-1 mb-2">
-                                <label class="input-group-text" for="dob">BUSINESS PHONE</label>
-                                <input type="text" class="form-control p-0 ps-2" id="dob">
+                                <label class="input-group-text ten-point" for="businessPhone">BUSINESS PHONE</label>
+                                <input type="text" class="form-control p-0 ps-2" id="businessPhone">
                             </div>
 
-                            <div class="border-top2" dir="rtl">
+                            <div class="border-top2 livorna" dir="rtl">
                                 <div class="input-group px-1">
-                                    <span class="fs-5 ms-2">מתפלל בביהמ"ד:</span>
-                                    <label class="input-group-text" for="hebrewDay">חול</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
-                                    <label class="input-group-text" for="hebrewMonth">שבת</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
+                                    <span class=" twelve-point ms-2">מתפלל בביהמ"ד:</span>
+                                    <label class="input-group-text twelve-point" for="davenWeek">חול</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="davenWeek">
+                                    <label class="input-group-text twelve-point me-1" for="davenShabbos">שבת</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="davenShabbos">
                                 </div>
                                 <div class="input-group px-1 mb-1">
-                                    <label class="input-group-text" for="dob">עם איזה רב/מו"ץ עומד בקשר?</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="dob">
+                                    <label class="input-group-text twelve-point" for="rav">עם איזה רב/מו"ץ עומד
+                                        בקשר?</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="rav">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row border-bottom2 p-0">
+                    <div class="row border-bottom2 p-0 livorna">
                         <div class="input-group px-1">
-                            <span class="fs-5 ms-2">האט איהר אין שטוב א...</span>
-                            <label class="input-group-text" for="video">ווידיא?</label>
+                            <span class="eleven-point ms-2">האט איהר אין שטוב א...</span>
+                            <label class="input-group-text eleven-point" for="video">ווידיא?</label>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="video" id="videoYes" value="option1">
-                                <label class="form-check-label" for="videoYes">יא</label>
+                                <label class="form-check-label eleven-point" for="videoYes">יא</label>
                             </div>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="video" id="videoNo" value="option2">
-                                <label class="form-check-label" for="videoNo">ניין</label>
+                                <label class="form-check-label eleven-point" for="videoNo">ניין</label>
                             </div>
 
                             <div class="divider mx-2"></div>
 
-                            <label class="input-group-text" for="computer">קאמפיוטער?</label>
+                            <label class="input-group-text eleven-point" for="computer">קאמפיוטער?</label>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="computer" id="computerYes"
                                     value="option1">
-                                <label class="form-check-label" for="computerYes">יא</label>
+                                <label class="form-check-label eleven-point" for="computerYes">יא</label>
                             </div>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="computer" id="computerNo"
                                     value="option2">
-                                <label class="form-check-label" for="computerNo">ניין</label>
+                                <label class="form-check-label eleven-point" for="computerNo">ניין</label>
                             </div>
 
                             <div class="divider mx-2"></div>
 
-                            <label class="input-group-text" for="internet">אינטערנעט?</label>
+                            <label class="input-group-text eleven-point" for="internet">אינטערנעט?</label>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="internet" id="internetYes"
                                     value="option1">
-                                <label class="form-check-label" for="internetYes">יא</label>
+                                <label class="form-check-label eleven-point" for="internetYes">יא</label>
                             </div>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="internet" id="internetNo"
                                     value="option2">
-                                <label class="form-check-label" for="internetNo">ניין</label>
+                                <label class="form-check-label eleven-point" for="internetNo">ניין</label>
                             </div>
 
                             <div class="divider mx-2"></div>
 
-                            <label class="input-group-text" for="radio">ראדיא?</label>
+                            <label class="input-group-text eleven-point" for="radio">ראדיא?</label>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="radio" id="radioYes" value="option1">
-                                <label class="form-check-label" for="radioYes">יא</label>
+                                <label class="form-check-label eleven-point" for="radioYes">יא</label>
                             </div>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="radio" id="radioNo" value="option2">
-                                <label class="form-check-label" for="radioNo">ניין</label>
+                                <label class="form-check-label eleven-point" for="radioNo">ניין</label>
                             </div>
 
                         </div>
                         <div class="input-group px-1 mb-1">
-                            <label class="input-group-text fs-5" for="connectedToInternet">הסעל. טעלעפאן מחובר
+                            <label class="input-group-text eleven-point" for="connectedToInternet">הסעל. טעלעפאן מחובר
                                 לאינטערנעט?</label>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="connectedToInternet"
                                     id="connectedToInternetYes" value="option1">
-                                <label class="form-check-label" for="connectedToInternetYes">יא</label>
+                                <label class="form-check-label eleven-point" for="connectedToInternetYes">יא</label>
                             </div>
                             <div class="form-check form-check-inline my-auto">
                                 <input class="form-check-input" type="radio" name="connectedToInternet"
                                     id="connectedToInternetNo" value="option2">
-                                <label class="form-check-label" for="connectedToInternetNo">ניין</label>
+                                <label class="form-check-label eleven-point" for="connectedToInternetNo">ניין</label>
                             </div>
 
                             <div class="divider mx-2"></div>
 
-                            <label class="input-group-text" for="internetFilter">מאושר ע"י</label>
+                            <label class="input-group-text eleven-point" for="internetFilter">מאושר ע"י</label>
                             <input type="text" class="form-control p-0 pe-2" id="internetFilter">
                         </div>
                     </div>
-                    <div class="row g-0 border-bottom2 p-1">
+                    <div class="row g-0 border-bottom2 p-1 livorna">
                         <div class="row g-0">
                             <div class="col-6">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">שם המנהל:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text fourteen-point" for="menahel">שם
+                                        המנהל:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="menahel">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">טעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="menahelTel">טעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="menahelTel">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">סעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="menahelCell">סעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="menahelCell">
                                 </div>
                             </div>
                         </div>
                         <div class="row g-0">
                             <div class="col-6">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">שם המלמד/המגי"ש:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text fourteen-point" for="melamed1">שם
+                                        המלמד/המגי"ש:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="melamed1">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">טעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="melamed1Tel">טעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="melamed1Tel">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">סעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="melamed1Cell">סעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="melamed1Cell">
                                 </div>
                             </div>
                         </div>
                         <div class="row g-0">
                             <div class="col-6">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">שם המלמד/המגי"ש:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text fourteen-point" for="melamed2">שם
+                                        המלמד/המגי"ש:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="melamed2">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">טעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="melamed2Tel">טעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="melamed2Tel">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">סעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="melamed2Cell">סעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="melamed2Cell">
                                 </div>
                             </div>
                         </div>
                         <div class="row g-0">
                             <div class="col-6">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">שם המלמד פרטי:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text fourteen-point" for="privateMelamed1">שם המלמד
+                                        פרטי:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="privateMelamed1">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">טעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="privateMelamed1Tel">טעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="privateMelamed1Tel">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">סעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="privateMelamed1Cell">סעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="privateMelamed1Cell">
                                 </div>
                             </div>
                         </div>
                         <div class="row g-0">
                             <div class="col-6">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">שם המלמד פרטי:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text fourteen-point" for="privateMelamed2">שם המלמד
+                                        פרטי:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="privateMelamed2">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">טעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="privateMelamed2Tel">טעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="privateMelamed2Tel">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group px-1">
-                                    <label class="input-group-text" for="internetFilter">סעל.:</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="internetFilter">
+                                    <label class="input-group-text twelve-point" for="privateMelamed2Cell">סעל.:</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="privateMelamed2Cell">
                                 </div>
                             </div>
                         </div>
                         <div class="row g-0">
                             <div class="col-6">
                                 <div class="input-group px-1">
-                                    <span class="fs-5 ms-2">איזה מסכת/פרק למד:</span>
-                                    <label class="input-group-text" for="hebrewDay">מס'</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
-                                    <label class="input-group-text" for="hebrewMonth">פרק</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
+                                    <span class="ms-2 twelve-point">איזה מסכת/פרק למד:</span>
+                                    <label class="input-group-text twelve-point" for="mesachteLearned">מס'</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="mesachteLearned">
+                                    <label class="input-group-text twelve-point me-1" for="perekLearned">פרק</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="perekLearned">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="input-group px-1">
-                                    <span class="fs-5 ms-2">באיזה עמוד גמרא הוא מוכן לבחינה:</span>
-                                    <label class="input-group-text" for="hebrewDay">מס'</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
-                                    <label class="input-group-text" for="hebrewMonth">דף</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
-                                    <label class="input-group-text" for="hebrewMonth">עמוד</label>
-                                    <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
+                                    <span class="ms-2 twelve-point">באיזה עמוד גמרא הוא מוכן לבחינה:</span>
+                                    <label class="input-group-text twelve-point" for="mesachteTest">מס'</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="mesachteTest">
+                                    <label class="input-group-text twelve-point me-1" for="dafTest">דף</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="dafTest">
+                                    <label class="input-group-text twelve-point me-1" for="UmidTest">עמוד</label>
+                                    <input type="text" class="form-control p-0 pe-2" id="UmidTest">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row g-0 p-0">
-                        <div class="col-6 border-left2 p-1">
-                            <span class="fs-5">קבלת האב</span>: אני מקבל עלי בל"נ לשלם השכ"ל מידי חודש בחדשו,
+                    <div class="row g-0 p-0 livorna">
+                        <div class="col-6 border-left2 p-1 twelve-point">
+                            <span class="fourteen-point">קבלת האב</span>: אני מקבל עלי בל"נ לשלם השכ"ל מידי חודש בחדשו,
                             וגם אני מבין שרק אם ביתי מתנהג עפ"י תקנות הישיבה אז יש לו הזכות
                             לבני נ"י לישאר שם, וכמו"כ אני מאשר בחתימת ידי דלמטה, שכל מה
                             שכ' לעיל הוא אמת וצדק.
                             <div class="input-group px-1">
-                                <span class="fs-5 ms-2">ועזבעה"ח:</span>
-                                <label class="input-group-text" for="hebrewDay">יום</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
-                                <label class="input-group-text" for="hebrewMonth">פרשת</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
-                                <label class="input-group-text" for="hebrewMonth">שנת</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
+                                <span class="ms-2 twelve-point">ועזבעה"ח:</span>
+                                <label class="input-group-text eleven-point" for="fatherSignDay">יום</label>
+                                <input type="text" class="form-control p-0 pe-2" id="fatherSignDay">
+                                <label class="input-group-text eleven-point me-1" for="fatherSignParsha">פרשת</label>
+                                <input type="text" class="form-control p-0 pe-2" id="fatherSignParsha">
+                                <label class="input-group-text eleven-point me-1" for="fatherSignYear">שנת</label>
+                                <input type="text" class="form-control p-0 pe-2" id="fatherSignYear">
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="hebrewDay">חתימת האב</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="fatherSignature"
+                                        value="option2">
+                                    <label class="form-check-label" for="fatherSignature">חתימת האב</label>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-6 p-1">
-                            <span class="fs-5">קבלת התלמיד</span>: איך נעם מיך אונטער בלי נדר זיך צוצושטעלן צו אלע
+                        <div class="col-6 p-1 twelve-point">
+                            <span class="fourteen-point">קבלת התלמיד</span>: איך נעם מיך אונטער בלי נדר זיך צוצושטעלן צו
+                            אלע
                             סדרים און זמנים און תקנות פון די ישיבה, און זיך צושטעלן צו די לימודים
                             כדי אנצוקומען צו די געוואונטשענע תכלית בעזהשי"ת, איך פארשטיי אז
                             דאס איז די תנאי צו פארבלייבן אין ראמען פון די ישיבה.
                             <div class="input-group px-1">
-                                <span class="fs-5 ms-2">אינטערגעשריבן:</span>
-                                <label class="input-group-text" for="hebrewDay">יום</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
-                                <label class="input-group-text" for="hebrewMonth">פרשת</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
-                                <label class="input-group-text" for="hebrewMonth">שנת</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewMonth">
+                                <span class="ms-2 twelve-point">אינטערגעשריבן:</span>
+                                <label class="input-group-text eleven-point" for="studentSignDay">יום</label>
+                                <input type="text" class="form-control p-0 pe-2" id="studentSignDay">
+                                <label class="input-group-text eleven-point me-1" for="studentSignParsha">פרשת</label>
+                                <input type="text" class="form-control p-0 pe-2" id="studentSignParsha">
+                                <label class="input-group-text eleven-point me-1" for="studentSignYear">שנת</label>
+                                <input type="text" class="form-control p-0 pe-2" id="studentSignYear">
                             </div>
                             <div class="input-group px-1">
-                                <label class="input-group-text" for="hebrewDay">חתימת התלמיד</label>
-                                <input type="text" class="form-control p-0 pe-2" id="hebrewDay">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="checkbox" id="studentSignature"
+                                        value="option2">
+                                    <label class="form-check-label" for="studentSignature">חתימת התלמיד</label>
+                                </div>
                             </div>
                         </div>
                     </div>
